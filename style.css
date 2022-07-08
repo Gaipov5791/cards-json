@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: rgba(109, 54, 54, 0.226);
+}
+
+.container {
+	width: 1140px;
+	padding: 15px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.title {
+	margin: 0 auto;
+}
+
+#cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	/* height: 100%; */
+	margin-top: 100px;
+}
+
+.card-img {
+	max-width: 300px;
+	height: 200px;
+}
+
+
+
