@@ -8,6 +8,7 @@ async function getCards() {
 
 getCards().then((cards) => {
 	let output = "";
+		
 
 	cards.forEach((elem) => {
 		
@@ -59,8 +60,6 @@ getCards().then((cards) => {
 		desc.style.textAlign = "justify";
 		cardOutput.appendChild(desc);
 
-		
-	
 		console.log(cards)
 	});
 
