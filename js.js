@@ -13,6 +13,7 @@ getCards().then((cards) => {
 	cards.forEach((elem) => {
 		
 		const cards = document.querySelector("#cards");
+		cards.classList = `cards ${elem.category}`;
 		cards.style.alignItems = "baseline";
 		
 		const cardInner = document.createElement("div");
@@ -60,10 +61,64 @@ getCards().then((cards) => {
 		desc.style.textAlign = "justify";
 		cardOutput.appendChild(desc);
 
+
+
+
+		const smartBtn = document.querySelector("#prod-smart-btn");
+		const laptopBtn = document.querySelector("#prod-laptop-btn");
+		const allProdBtn = document.querySelector("#prod-all-btn");
+
+
+	
+
+		smartBtn.addEventListener("click", function() {
+			if (elem.category === "смартфоны") {
+				cardInner.style.display = "block";
+			} else {
+				cardInner.style.display = "none";
+			}
+		});
+
+		laptopBtn.addEventListener("click", function() {
+			if (elem.category === "ноутбуки") {
+				cardInner.style.display = "block";
+			} else {
+				cardInner.style.display = "none";
+			}
+		});
+
+		allProdBtn.addEventListener("click", function() {
+			if (elem.category === "") {
+				cardInner.style.display = "none";
+			} else {
+				cardInner.style.display = "block";
+			}
+		});
+
+		
+		// const sortProducts = document.querySelector(".cards__filters");
+		// const filterCards = document.querySelectorAll(".cards");
+
+		// sortProducts.addEventListener("click", (e) => {
+		// 	if (e.target.tagName !== "BUTTON") return false;
+		// 	let filterClass = e.target.dataset["filter"];
+		// 	filterCards.forEach((elem) => {
+		// 		elem.classList.remove("hide");
+		// 		if (!elem.classList.contains(filterClass) && filterClass !== "all") {
+		// 			elem.classList.add("hide");
+		// 		}
+		// 	});
+		// });
+
+
+
 		console.log(cards)
 	});
 
 });
+
+
+
 
 
 
